@@ -1,0 +1,8 @@
+details[open] summary svg {
+    transform: rotate(180deg); /* Rotate the arrow 180 degrees */
+    transition: transform 0.3s ease; /* Smooth transition */
+  }
+  
+  summary svg {
+    transition: transform 0.3s ease;
+  }

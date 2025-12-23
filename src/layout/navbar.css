@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .transition-all {
+        transition-property: all;
+        transition-timing-function: cubic-bezier(.4,0,.2,1);
+        transition-duration: .15s;
+    }
+    .text-ink {
+        color: #ede9fe;
+    }
+    .text-muted {
+        color: #c4b5fd;
+    }
+}
+
+
+
+.nav-link {
+    @apply ml-8 font-medium cursor-pointer items-center relative transition-all flex text-ink hover:text-muted text-sm;
+  }
+
+.nav-btn {
+    @apply cursor-pointer items-center relative gap-2 transition duration-75 flex font-medium rounded-full bg-white text-black hover:bg-gray-200 active:bg-gray-300 hover:text-black active:text-black text-base py-2 px-4;
+  }
+
+.nav-container {
+    @apply flex justify-between p-4 mx-auto w-full max-w-7xl px-4 py-3 md:px-4 md:py-4 xl:px-4;
+}
+
+.nav-link-content {
+    @apply pointer-events-none flex items-center justify-center transition-all;
+}
+
+.nav-link-responsive {
+    @apply cursor-pointer items-center relative gap-2 transition-all flex text-ink hover:text-muted w-full py-4 text-base font-medium justify-start;
+}

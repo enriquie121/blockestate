@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .font-serif {
+        font-family: Canela Deck, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+    }
+}

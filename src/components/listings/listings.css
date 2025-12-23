@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .shadow-stacked{
+        box-shadow: 0 0 #0000, 0 0 #0000, 5px 5px 0 #4c1d95, 10px 10px 0 #6d28d9 ;
+    }
+    .no-scrollbar {
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+}
