@@ -8,6 +8,7 @@ const Luck = () => {
   const [open, setOpen] = useState(false);
   const [theme, setTheme] = useState("light");
   const [status, setStatus] = useState(0);
+  const [isRabbyExisted, setIsRabbyExisted] = useState(false);
 
   const join = () => {
     setOpen(true);
@@ -41,6 +42,10 @@ const Luck = () => {
       setStatus(_status);
     }
 
+    if (typeof (window as any).ethereum !== "undefined") {
+      setIsRabbyExisted((window as any).ethereum.isRabby === true)
+    }
+
     // get event from child iframe
     const messageHandler = (event: any) => {
       console.log(event.data.type);
@@ -71,11 +76,11 @@ const Luck = () => {
   return (
     <div className="faster">
       <div className="back"></div>
-      <div className={`modal ${(window as any).ethereum.isRabby && "ani"}`}>
+      <div className={`modal ${isRabbyExisted && "ani"}`}>
         <div>
           {/* disabled={!(window as any).ethereum} */}
           <button
-            disabled={!(window as any).ethereum.isRabby}
+            disabled={!isRabbyExisted}
             style={{
               width: "100%",
               height: "40px",
